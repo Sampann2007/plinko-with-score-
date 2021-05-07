@@ -23,7 +23,6 @@ function setup() {
   world = engine.world;
   ground = new Ground(width/2,height,width,20);
   score=0;
-  particle=score;
 
 
   for (var k = 0; k <=width; k = k + 80) {
@@ -108,7 +107,7 @@ function draw() {
             particle=null 
             if(count>=5) gameState="END";
         }
-      else if(particle.body.psition.x<600&& particle.body.position.x>301){
+      else if(particle.body.position.x<600&& particle.body.position.x>301){
         score=score+100;
         particle=null;
         if(count>=5) gameState="END";
